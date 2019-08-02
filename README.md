@@ -366,6 +366,27 @@ module.exports = {
 
 ```
 
+
+### Multipart Post
+
+To install Multipart Post storage add a key to the `storage` configuration. Notice, you can add as many different locations you want by giving them different keys.
+
+```javascript
+var multipartPostConfig = require('pdf-bot/src/storage/multipartpost')
+
+module.exports = {
+  api: {
+    token: 'api-token'
+  },
+  storage: {
+    'multipart': multipartPostConfig({
+      url: '[URL TO POST TO]'
+    })
+  }
+}
+
+```
+
 ## Options
 
 ```javascript
